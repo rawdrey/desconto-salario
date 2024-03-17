@@ -16,16 +16,10 @@ namespace salarioFuncionario
             double salarioBruto = double.Parse(Console.ReadLine());
             Console.WriteLine("Incira o %imposto sobre o salário");
             double porcentagemImposto = double.Parse(Console.ReadLine());
-
-            double salarioLiquido = calcularSalarioLiquido(salarioBruto, porcentagemImposto);
+            funcionario funcionario = new funcionario(nome, salarioBruto, porcentagemImposto);
+            double salarioBrutoLiquido = funcionario.CalcularSalarioLiquido();
             Console.WriteLine($"O funcionário {funcionario}, recebe um salário líquido de R${salarioLiquido:F2}.");
         }
-            public static doub
-            le calcularSalarioLiquido(double salarioBruto, doubleporcentagemImposto)
-            
-            double desconto = salarioBruto * (porcentoImposto / 100);
-            salarioBrutoLiquido = salarioBruto - desconto;
-            return salarioLiquido;
-        
+           
     }
 }
