@@ -23,12 +23,12 @@ namespace salarioFuncionario
         double salarioLiquido = SalarioBruto - desconto;
         return salarioLiquido;
     }
-    public void exibirMensagemSalarioLiquido
+    public override string toString()
     {
-        funcionario funcionario = new funcionario(nome, salarioBruto, porcentagemImposto);
-    double salarioBrutoLiquido = funcionario.CalcularSalarioLiquido();
-    Console.WriteLine($"O funcionário {funcionario}, recebe um salário líquido de R${salarioLiquido:F2}.");
-
+     
+        double salarioLiquido = calcularSalarioLiquido();
+        return $"Nome: {nome}, salário bruto: R${salarioBruto:F2}, porcentagem de imposto: R${porcentagemImposto:F2}%, salário líquido: R${salarioLiquido:f2};";
+    }     
     }
 
     }

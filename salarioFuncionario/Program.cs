@@ -16,7 +16,8 @@ namespace salarioFuncionario
             double salarioBruto = double.Parse(Console.ReadLine());
             Console.WriteLine("Incira o %imposto sobre o salário");
             double porcentagemImposto = double.Parse(Console.ReadLine());
-
+            funcionario funcionario = newFuncionario(nome, salarioBruto, porcentagemImposto);
+            Console.WriteLine(funcionario);
         }
            
     }
